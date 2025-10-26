@@ -2,11 +2,11 @@
 
 Este proyecto es una aplicación de escritorio desarrollada en Python que simula la generación de variables aleatorias discretas (Bernoulli, Binomial, Poisson) y continuas (Exponencial, Erlang, Gamma, Beta). Utiliza métodos estocásticos clásicos (Transformada Inversa, Convolución, Composición) y valida la calidad de los datos generados mediante pruebas de bondad de ajuste (Chi-cuadrado y Kolmogórov-Smirnov).
 
-## 🚀 Instalación y Requisitos
+## 🚀 Instalación y requisitos
 
 Para ejecutar esta aplicación, necesita tener instalado **Python 3.x** y las librerías científicas y de interfaz gráfica especificadas.
 
-### 1\. Librerías Requeridas
+### 1\. Librerías requeridas
 
 Este proyecto utiliza librerías clave que deben ser instaladas. El único requisito que no es estándar es `Pillow` (`PIL`), usado para manejar la imagen de inicio.
 
@@ -24,7 +24,7 @@ pip install numpy scipy matplotlib pillow
 | **`pillow`** (PIL) | Carga y manejo de la imagen `box.png` en la interfaz. |
 | **`tkinter`** | Biblioteca estándar de Python para la Interfaz Gráfica de Usuario (GUI). |
 
-### 2\. Estructura del Proyecto
+### 2\. Estructura del proyecto
 
 Asegúrese de que el archivo principal de Python y la imagen de inicio estén en la misma carpeta:
 
@@ -35,7 +35,7 @@ Asegúrese de que el archivo principal de Python y la imagen de inicio estén en
 └── README.md         <-- Este archivo
 ```
 
-## 💻 Uso de la Aplicación
+## 💻 Uso de la aplicación
 
 Para iniciar la aplicación, navegue hasta el directorio raíz del proyecto (`/Generador_Variables_Aleatorias/`) en su terminal o línea de comandos y ejecute el archivo Python:
 
@@ -43,7 +43,7 @@ Para iniciar la aplicación, navegue hasta el directorio raíz del proyecto (`/G
 python generador_app.py
 ```
 
-### Flujo de Trabajo
+### Flujo de trabajo
 
 1.  **Inicio:** Seleccione **"Discreta"** o **"Continua"**.
 2.  **Selección:** Elija la distribución (e.g., Binomial, Erlang).
@@ -51,17 +51,17 @@ python generador_app.py
       * *Nota:* Para Gamma, Erlang y Beta, los parámetros de forma deben ser **enteros positivos** debido al método de simulación implementado (Convolución/Composición).
 4.  **Generar:** La aplicación mostrará un histograma, la curva/barras teóricas, y el resultado de la prueba de bondad de ajuste (p-value).
 
-## 💡 Métodos de Simulación Implementados
+## 💡 Métodos de simulación implementados
 
 El programa valida la muestra generada con el método correspondiente a la naturaleza de la distribución, asegurando la precisión de los resultados.
 
-| Distribución | Método de Generación | Prueba de Validación |
+| Distribución | Método de generación | Prueba de validación |
 | :--- | :--- | :--- |
 | **Bernoulli, Exponencial, Poisson** | Transformada Inversa | Chi-cuadrado / Kolmogórov-Smirnov |
 | **Binomial, Erlang, Gamma** (k entero) | Convolución | Chi-cuadrado / Kolmogórov-Smirnov |
 | **Beta** ($\alpha, \beta$ enteros) | Composición (vía Gamma) | Kolmogórov-Smirnov |
 
-## ⚙️ Desarrollo y Estructura del Código
+## ⚙️ Desarrollo y estructura del código
 
 El código está organizado en clases de Python siguiendo el principio de Programación Orientada a Objetos (POO):
 
